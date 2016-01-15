@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model</title>
+    <style>
+    .area {width:200px; height:200px; margin:10px;display: inline-block;overflow: auto;}
+    .area:hover {-webkit-transform: scale(1.03);}
+    .display {width: 930px;height: 930px;border: 1px solid #ccc;border-radius: 4px;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),0 8px 0 -3px #f6f6f6,0 9px 1px -3px rgba(0, 0, 0, 0.2),0 16px 0 -6px #f6f6f6,0 17px 2px -6px rgba(0, 0, 0, 0.2)}
+    .v-clr {width:200px; height:22px; line-height:22px; border-radius:2px; margin-bottom:20px; border:1px solid #ccc; vertical-align:middle; text-indent:.5em; }
+    .cbtn {height:26px; line-height:26px; width:100px; background:#16BCE4; border:1px solid #999; color:#fff; font:14px 'microsoft yahei'; cursor:pointer; border-radius:4px;vertical-align: top}
+    .footer {width: 100%;margin-top: 20px;}
+    .footer .num {font: 14 'microsoft yahei'; width: 100px;line-height: 20px;color: red;}
+    </style>
+</head>
+<body>
+    <input type="text" class="v-clr" placeholder="输入色值(英文或者#ffffff)" />
+    <input type="button" class="cbtn" value="点&nbsp;&nbsp;我" />
+    <div class="display"></div>
+    <div class="footer"></div>
+    <script type="text/template" id="dom-count">
+        添加了 <span class="num"><%=completed %></span> 个色块
+    </script>
+</body>
+<script src="node-modules/jquery/jquery.js"></script>
+<script src="node-modules/underscore/underscore.js"></script>
+<script src="node-modules/backbone/backbone.js"></script>
+<script src="js/models/color.js"></script>
+<script src="js/collections/color-dom.js"></script>
+<script src="js/views/color-view.js"></script>
+<script src="js/routers/router.js"></script>
+</html>
